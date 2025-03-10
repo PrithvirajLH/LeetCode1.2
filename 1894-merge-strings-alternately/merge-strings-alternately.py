@@ -8,15 +8,15 @@ class Solution:
         if len(word1) < len(word2):
             i = 0
             while i < len(word1):
-                res += word1[i]
-                res += word2[i]
+                res += word1[i] + word2[i]
                 i += 1
-            res += word2[i:]
+            res+= word2[i:]
         else:
             i = 0
-            while i < len(word2):
-                res += word1[i]
-                res += word2[i]
+            while i <len(word2):
+                res += word1[i] + word2[i]
                 i += 1
             res += word1[i:]
-        return res 
+        return res
+
+        
