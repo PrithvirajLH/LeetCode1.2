@@ -4,19 +4,16 @@ class Solution:
             return word2
         if not word2:
             return word1
-        res = ""
-        if len(word1) < len(word2):
+        def merge(word1, word2, num):
+            res = ""
             i = 0
-            while i < len(word1):
+            while i < num:
                 res += word1[i] + word2[i]
                 i += 1
-            res+= word2[i:]
-        else:
-            i = 0
-            while i <len(word2):
-                res += word1[i] + word2[i]
-                i += 1
-            res += word1[i:]
-        return res
+            res += word1[i:] + word2[i:]
+            return res
+        
+        ans = merge(word1, word2, min(len(word1), len(word2)))
+        return ans
 
         
