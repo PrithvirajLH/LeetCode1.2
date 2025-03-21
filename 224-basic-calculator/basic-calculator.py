@@ -3,8 +3,8 @@ class Solution:
         def evaluate(op, v):
             if op == "+": stack.append(v)
             if op == "-": stack.append(-v)
-            if op == "*": stack.append(stack.pop()*v)
-            if op == "/": stack.append(int(stack.pop()/v))
+            # if op == "*": stack.append(stack.pop()*v)
+            # if op == "/": stack.append(int(stack.pop()/v))
 
         i = 0 
         num = 0
