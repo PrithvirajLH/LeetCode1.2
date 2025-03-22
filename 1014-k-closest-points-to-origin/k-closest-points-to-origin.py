@@ -3,11 +3,12 @@ class Solution:
         minHeap = []
         for x, y in points:
             dist = (x**2) + (y**2)
-            heapq.heappush(minHeap, [-dist, x, y])
-
-            if len(minHeap) > k:
-                heapq.heappop(minHeap)
+            heapq.heappush(minHeap, [dist, x, y])
+        res = []
+        for i in range(k):
+            _, x, y = heapq.heappop(minHeap)
+            res.append([x,y])
         
-        return [[x,y] for _, x, y in minHeap]
+        return res
 
         
